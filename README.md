@@ -19,3 +19,14 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/scylla_elixir_driver>.
 
+### Hello World
+
+```bash
+iex -S mix
+```
+
+```elixir
+"127.0.0.1:9042"
+  |> ScyllaElixirDriver.start_link
+  |> ScyllaElixirDriver.execute("SELECT table_name FROM system_schema.scylla_tables limit 1")
+```
